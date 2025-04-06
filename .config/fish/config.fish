@@ -20,5 +20,4 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /Users/usteiger/.nix-profile/bin
 fish_add_path /nix/var/nix/profiles/default/bin
 set -gx EDITOR hx
-set -x KUBECONFIG /Users/usteiger/.kube/config:/Users/usteiger/.kube/eksconfig
 set -x GPG_TTY (tty)
