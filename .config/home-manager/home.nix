@@ -1,21 +1,23 @@
 { config, pkgs, helix, ... }:
 
 {
-  home.username = builtins.getEnv "USER";
-  home.homeDirectory = builtins.getEnv "HOME";
+  nixpkgs.config.allowUnfree = true;
+  home.username = "ixsploit";
+  home.homeDirectory = "/Users/ixsploit";
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
     azure-cli 
     bash
     bat
+    eksctl
     fd
     fish
     fzf
     gh
-    ghidra
     gnupg
     gopls
+    kubernetes-helm
     hexyl
     hyperfine
     ipcalc
@@ -24,15 +26,16 @@
     rio
     ruff
     rustup
+    terraform
     opentofu
     uv
     yaml-language-server
     yazi
     zellij
-
+    zoxide
+    docker  
     helix.packages.${pkgs.system}.helix
   ];
 
   programs.home-manager.enable = true;
 }
-
