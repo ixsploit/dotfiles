@@ -23,6 +23,8 @@
     ipcalc
     k9s
     python312Packages.jedi-language-server
+    python312Packages.python-lsp-server 
+    pyright
     rio
     ruff
     rustup

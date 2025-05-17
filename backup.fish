@@ -1,4 +1,5 @@
 #!/usr/bin/env fish
+set -x
 
 # Define source and destination directories
 set dotfiles_dir ~/dotfiles
@@ -15,6 +16,8 @@ set files_to_copy \
 # Ensure destination directories exist
 mkdir -p $dotfiles_dir/.config/fish
 mkdir -p $dotfiles_dir/.config/home-manager
+
+cp -r $config_dir/helix $dotfiles_dir/.config/helix
 
 # Copy files
 for i in (seq 1 2 (count $files_to_copy))

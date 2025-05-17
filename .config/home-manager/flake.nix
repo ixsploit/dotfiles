@@ -18,7 +18,7 @@
         overlays = [];
       };
     in {
-      homeConfigurations.usteiger = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.ixsploit = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = { inherit helix; }; 
         modules = [ ./home.nix ];
